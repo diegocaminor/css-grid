@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tamaño de item columnas</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-gap: 5px;
+        height: 100vh;
+      }
+      .item {
+        border-radius: 10px;
+        /*background: lightblue;
+        padding: 10px;
+        border: 1px solid red; */
+      }
+      .item:nth-of-type(1) {
+        grid-column: 1 / -1;
+        background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+        background-size: cover;
+      }
+      .item:nth-of-type(2) {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 2;
+        background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/2193ee31010043.563caf25b7e01.png");
+      }
+      .item:nth-of-type(3) {
+        grid-column: 4 / span 2;
+        grid-row: 2 / span 2;
+        background-image: url("https://education.ket.org/wp-content/uploads/2016/08/4743.jpg");
+      }
+      .item:nth-of-type(4) {
+        background-image: url("https://image.shutterstock.com/image-photo/paint-splash-abstract-background-260nw-534175150.jpg");
+        grid-column: 6 / span 2;
+      }
+      .item:nth-of-type(5) {
+        background-image: url("https://image.shutterstock.com/image-photo/paint-splash-abstract-background-260nw-534175150.jpg");
+      }
+      .item:nth-of-type(6) {
+        background-image: url("https://image.shutterstock.com/image-illustration/3d-render-abstract-art-swirl-260nw-1541621912.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item">item #1</div>
+      <div class="item">item #2</div>
+      <div class="item">item #3</div>
+      <div class="item">item #4</div>
+      <div class="item">item #5</div>
+      <div class="item">item #6</div>
+    </section>
+  </body>
+</html>
